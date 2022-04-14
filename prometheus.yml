@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 15s
+
+scrape_configs:
+  - job_name: janusgraph
+    honor_labels: true
+    static_configs:
+      - targets: ["janusgraph:8080"]
+        labels:
+          node: jce-docker
